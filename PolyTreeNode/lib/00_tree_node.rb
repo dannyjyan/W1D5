@@ -1,5 +1,5 @@
 class PolyTreeNode
-  
+  attr_reader :parent, :children, :value
   def initialize(value)
     @value = value 
     @children = []
@@ -54,36 +54,24 @@ class PolyTreeNode
     end 
   end 
 
-  def parent
-    @parent 
-  end 
-
-  def children 
-    @children
-  end 
-
-  def value 
-    @value 
-  end 
-
   def inspect
     "#{value}"
   end
 end
 
-a = PolyTreeNode.new('a')
-b = PolyTreeNode.new('b')
-c = PolyTreeNode.new('c')
-d = PolyTreeNode.new('d')
-e = PolyTreeNode.new('e')
-f = PolyTreeNode.new('f')
-g = PolyTreeNode.new('g')
+# a = PolyTreeNode.new('a')
+# b = PolyTreeNode.new('b')
+# c = PolyTreeNode.new('c')
+# d = PolyTreeNode.new('d')
+# e = PolyTreeNode.new('e')
+# f = PolyTreeNode.new('f')
+# g = PolyTreeNode.new('g')
 
-d.parent = b 
-e.parent = b 
-f.parent = c
-g.parent = c
-b.parent = a 
-c.parent = a
+# d.parent = b 
+# e.parent = b 
+# f.parent = c
+# g.parent = c
+# b.parent = a 
+# c.parent = a
 
-a.dfs('g')
+# a.dfs('g')
