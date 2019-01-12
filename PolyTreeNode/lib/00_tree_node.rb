@@ -46,11 +46,11 @@ class PolyTreeNode
     queue = [self]
     until queue.empty? 
       curr_node = queue.shift 
-      p curr_node
       if curr_node.value == target 
         return curr_node
       end 
-      curr_node.children.each {|child| queue.push(child)}
+      # curr_node.children.each {|child| queue.push(child)}
+      queue += curr_node.children
     end 
   end 
 
@@ -74,4 +74,4 @@ end
 # b.parent = a 
 # c.parent = a
 
-# a.dfs('g')
+# a.dfs('g')s
